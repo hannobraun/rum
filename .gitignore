@@ -1,5 +1,5 @@
 *.sublime-workspace
-*.js
-*.js.map
 *.ll
+a.out.js
+a.out.js.map
 main
