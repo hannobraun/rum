@@ -1,3 +1,4 @@
-fn main() {
-	print!("Hello, World!\n");
+#[start]
+fn main(_: int, _: **u8) -> int {
+	1
 }
