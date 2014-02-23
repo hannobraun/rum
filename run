@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+rustc --emit ir main.rs &&
+emcc main.ll &&
+node a.out.js
