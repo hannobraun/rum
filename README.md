@@ -56,6 +56,6 @@ version.
 7. Add the emscripten directory to your PATH variable.
 
 
-##  Running the sample program
+##  Compile and run the sample program
 
 $ ./run
