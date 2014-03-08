@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+git submodule update --init
+
+(
+	cd vendor/llvm/tools;
+	git clone http://llvm.org/git/clang.git)
+
+./scripts/tasks/build-rust
+./scripts/tasks/build-llvm
