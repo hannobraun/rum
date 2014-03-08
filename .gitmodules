@@ -1,3 +1,6 @@
 [submodule "vendor/rust"]
 	path = vendor/rust
 	url = https://github.com/mozilla/rust.git
+[submodule "vendor/emscripten"]
+	path = vendor/emscripten
+	url = https://github.com/kripken/emscripten.git
