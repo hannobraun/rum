@@ -4,3 +4,6 @@
 [submodule "vendor/emscripten"]
 	path = vendor/emscripten
 	url = https://github.com/kripken/emscripten.git
+[submodule "vendor/llvm"]
+	path = vendor/llvm
+	url = http://llvm.org/git/llvm.git
