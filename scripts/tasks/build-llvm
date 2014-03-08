@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+cd vendor/llvm
+./configure && make clean && make -j 4
