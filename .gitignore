@@ -1,5 +1,4 @@
 *.sublime-workspace
-*.ll
 a.out.js
 a.out.js.map
-main
+output
