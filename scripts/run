@@ -3,6 +3,8 @@
 RUSTC=$(pwd)/vendor/rust/x86_64-unknown-linux-gnu/stage2/bin/rustc
 EMCC=$(pwd)/vendor/emscripten/emcc
 
+mkdir -p output
+
 $RUSTC --emit ir --out-dir output source/main.rs &&
-$EMCC --js-library source/library.js output/main.ll &&
+$EMCC --em-config ./emscripten.py --js-library source/library.js output/main.ll &&
 node a.out.js
