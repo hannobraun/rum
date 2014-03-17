@@ -13,11 +13,15 @@ All of this is pretty raw at the moment. It has only been tested on Ubuntu 13.10
 
 ## Prerequisites
 
-You need a working [node.js](http://nodejs.org) installation. I've tested with
-v0.10.26, but I don't think this is very much version-specific.
+You need a working [node.js](http://nodejs.org). I've tested with v0.10.26, but
+I don't think this is very much version-specific.
 
-The Rust, Emscripten and LLVM version requirements are more specific, but all of
-those three are included in this repository.
+You'll also need some basics to build Rust and LLVM: make, a C/C++ compiler,
+that kind of stuff. If you run into any problems, feel free to add your
+solutions to this README and send me a pull request!
+
+This repository includes Rust, Emscripten and LLVM, so you're covered on that
+front.
 
 
 ## Usage
