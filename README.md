@@ -30,6 +30,8 @@ Before using this the first time, you need to initialize the repository:
 
 > $ ./scripts/init
 
+Be aware: This will take a while.
+
 After that, you can compile and run the Rust program (source/main.rs) with the
 following command:
 
