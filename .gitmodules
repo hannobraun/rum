@@ -7,3 +7,6 @@
 [submodule "vendor/llvm"]
 	path = vendor/llvm
 	url = http://llvm.org/git/llvm.git
+[submodule "vendor/clang"]
+	path = vendor/clang
+	url = http://llvm.org/git/clang.git
