@@ -2,8 +2,10 @@
 
 ## About
 
-Rum is currently an experiment. Its goal is to become an HTML5 game framework
-using [Rust](http://rust-lang.org) via [Emscripten](http://emscripten.org).
+Rum is an experiment. Its goal is to become an HTML5 game framework using
+[Rust](http://rust-lang.org) via [Emscripten](http://emscripten.org). At the
+moment, there's just a sample Rust program that is compiled to JavaScript and
+run with node.js.
 
 All of this is pretty raw at the moment. It has only been tested on Ubuntu 13.10
 64-bit.
@@ -11,51 +13,31 @@ All of this is pretty raw at the moment. It has only been tested on Ubuntu 13.10
 
 ## Prerequisites
 
-### Rust
+You need a working [node.js](http://nodejs.org) installation. I've tested with
+v0.10.26, but I don't think this is very much version-specific.
 
-You need a working Rust installation. At the time of writing, I've been
-successful with the following:
-
-> $ rustc --version
-> rustc 0.10-pre (d22099c 2014-02-22 01:11:50 -0800)
-> host: x86_64-unknown-linux-gnu
+The Rust, Emscripten and LLVM version requirements are more specific, but all of
+those three are included in this repository.
 
 
-### Emscripten & LLVM
+## Usage
 
-Stock emscripten won't work with Rust because LLVM 3.2 (used by emscripten)
-can't handle the IR (intermediate representation) produced by the 3.5
-pre-release version that Rust uses.
+Before using this the first time, you need to initialize the repository:
 
-To solve this problem, you need to install a recent version of LLVM (I've had
-success with commit 589d6377251d39e5f4d866bcb495bf6e547b4372 of LLVM's Git
-mirror). The following steps describe how to set up emscripten with the latest
-version.
+> $ ./scripts/init
 
-1. Clone LLVM:
-   $ git clone http://llvm.org/git/llvm.git
-2. Clone Clang:
-   $ cd llvm/tools
-   $ git clone http://llvm.org/git/clang.git
-3. Build LLVM + Clang:
-   $ cd llvm
-   $ ./configure --enable-optimized --disable-assertions
-   $ make
-4. Clone emscripten:
-   git clone https://github.com/kripken/emscripten.git
-5. Generate emscripten configuration file:
-   $ cd emscripten
-   $ ./emcc
-6. Configure emscripten:
-   $ cd llvm/Release/bin
-   $ pwd
-   Note down that path.
-   $ vim ~/.emscripten
-   Comment out the "LLVM_ROOT =" line and replace it with the following:
-   LLVM_ROOT = '<insert path here>'
-7. Add the emscripten directory to your PATH variable.
+After that, you can compile and run the Rust program (source/main.rs) with the
+following command:
+
+> $ ./scripts/run
 
 
-##  Compile and run the sample program
+## Limitations
 
-$ ./run
+As you can see, currently the Rust program is very basic, kind of a
+proto-"Hello, World". The reasons for this is that currently, only programs that
+don't require any kind of Rust library (including std) will run. Trying to write
+an actual "Hello, World" (i.e. using a string) already requires the std.
+
+As soon as I have some time to invest in this again, I will try to overcome this
+limitation and support "real" Rust programs.
