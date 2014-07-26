@@ -41,7 +41,7 @@ following command:
 ## Limitations
 
 As you can see, currently the Rust program is very basic, kind of a
-proto-"Hello, World". The reasons for this is that currently, only programs that
+proto-"Hello, World". The reason for this is that currently, only programs that
 don't require any kind of Rust library (including std) will run. Trying to write
 an actual "Hello, World" (i.e. using a string) already requires the std.
 
