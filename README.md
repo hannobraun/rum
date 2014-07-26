@@ -7,8 +7,8 @@ Rum is an experiment. Its goal is to become an HTML5 game framework using
 moment, there's just a sample Rust program that is compiled to JavaScript and
 run with node.js.
 
-All of this is pretty raw at the moment. It has only been tested on Ubuntu 13.10
-64-bit.
+All of this is pretty raw at the moment. It has only been tested on recent
+versions of Ubuntu (64 bit).
 
 
 ## Prerequisites
