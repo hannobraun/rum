@@ -5,7 +5,7 @@ import os
 
 # this helps projects using emscripten find it
 EMSCRIPTEN_ROOT = os.path.expanduser('vendor/emscripten') # directory
-LLVM_ROOT = os.path.expanduser('vendor/llvm/Release+Asserts/bin/') # directory
+LLVM_ROOT = os.path.expanduser('vendor/emscripten-fastcomp/build/bin/') # directory
 PYTHON = os.path.expanduser(os.getenv('PYTHON') or '/usr/bin/python2') # executable
 
 # See below for notes on which JS engine(s) you need
