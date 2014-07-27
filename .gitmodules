@@ -10,3 +10,9 @@
 [submodule "vendor/clang"]
 	path = vendor/clang
 	url = http://llvm.org/git/clang.git
+[submodule "vendor/emscripten-fastcomp"]
+	path = vendor/emscripten-fastcomp
+	url = https://github.com/kripken/emscripten-fastcomp.git
+[submodule "vendor/emscripten-fastcomp-clang"]
+	path = vendor/emscripten-fastcomp-clang
+	url = https://github.com/kripken/emscripten-fastcomp-clang
