@@ -3,6 +3,8 @@
 RUSTC=$(pwd)/vendor/rust/x86_64-unknown-linux-gnu/stage2/bin/rustc
 EMCC=$(pwd)/vendor/emscripten/emcc
 
+export LD_LIBRARY_PATH=$(dirname $RUSTC)/../lib
+
 mkdir -p output
 
 $RUSTC --emit ir --out-dir output source/main.rs &&

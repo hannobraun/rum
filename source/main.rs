@@ -4,7 +4,7 @@ extern {
 }
 
 #[start]
-fn main(_: int, _: **u8) -> int {
+fn main(_: int, _: *const *const u8) -> int {
 	unsafe {
 		print_number(5);
 	}
