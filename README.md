@@ -2,10 +2,12 @@
 
 ## About
 
-Rum is an experiment. Its goal is to become an HTML5 game framework using
-[Rust](http://rust-lang.org) via [Emscripten](http://emscripten.org). At the
-moment, there's just a sample Rust program that is compiled to JavaScript and
-run with node.js.
+Rum is an experiment. It was started with the goal of creating a framework that
+can be used to write HTML5 games in [Rust](http://rust-lang.org) via
+[Emscripten](http://emscripten.org). Unfortunately I had to realize that my
+available time is too limited to reach that goal, so for now, I have to settle
+one creating a proof-of-concept that shows it's possible to compile Rust code
+to JavaScript with Emscripten.
 
 All of this is pretty raw at the moment. It has only been tested on recent
 versions of Ubuntu (64 bit).
